@@ -1,4 +1,5 @@
 import './App.css';
+import { NumberedList } from './NumberedList';
 import { RegularList } from './RegularList';
 import { SplitScreen } from './SplitScreen';
 import { LargePersonListItem } from './people/LargePersonListItem';
@@ -80,12 +81,12 @@ function App() {
         resourceName={"person"}
         itemComponent={LargePersonListItem}
       />
-      <RegularList
+      <NumberedList
         items={products}
         resourceName={"product"}
         itemComponent={SmallProductListItem}
       />
-      <RegularList
+      <NumberedList
         items={products}
         resourceName={"product"}
         itemComponent={LargeProductListItem}
