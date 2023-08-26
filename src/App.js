@@ -3,6 +3,8 @@ import { RegularList } from './RegularList';
 import { SplitScreen } from './SplitScreen';
 import { LargePersonListItem } from './people/LargePersonListItem';
 import { SmallPersonListItem } from './people/SmallPersonListItem';
+import { LargeProductListItem } from './product/LargeProductListItem';
+import {SmallProductListItem} from './product/SmallProductListItem';
 
 const LeftHandComponent = ({ name }) => {
   return (
@@ -58,7 +60,7 @@ const products = [
 
 function App() {
   return (
-    <>
+    <div>
       {/* <SplitScreen
       leftWeight={1}
       rightWeight={3}
@@ -78,7 +80,17 @@ function App() {
         resourceName={"person"}
         itemComponent={LargePersonListItem}
       />
-    </>
+      <RegularList
+        items={products}
+        resourceName={"product"}
+        itemComponent={SmallProductListItem}
+      />
+      <RegularList
+        items={products}
+        resourceName={"product"}
+        itemComponent={LargeProductListItem}
+      />
+    </div>
   );
 }
 
