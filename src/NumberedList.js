@@ -9,7 +9,7 @@ export const NumberedList = ({
                 items.map((item, i) => (
                     <>
                         <div className="flex">
-                            <h3>{i + 1}</h3>
+                            <h3 className="text-3x1">{i + 1}</h3>
                             <ItemComponent key={i} {...{ [resourceName]: item }} />
                         </div>
                     </>
